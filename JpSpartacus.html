@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JP spartacus — IT Services & Consultancy</title>
+  <meta name="description" content="JP spartacus provides software development, cloud, and IT consultancy services. Transforming ideas into digital products.">
+  <meta name="keywords" content="IT Services, Consultancy, Laravel, Web Development, Cloud, Cybersecurity">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles */
+    .gradient-hero { background: linear-gradient(90deg, #0f172a 0%, #0ea5a4 100%); }
+    .card-shadow { box-shadow: 0 10px 20px rgba(2,6,23,0.12); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-400 to-blue-600 flex items-center justify-center text-white font-bold">JP</div>
+        <div class="hidden sm:block">
+          <div class="font-semibold">JP spartacus</div>
+          <div class="text-xs text-slate-500">IT Services & Consultancy</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#services" class="hover:text-teal-600">Services</a>
+        <a href="#portfolio" class="hover:text-teal-600">Portfolio</a>
+        <a href="#about" class="hover:text-teal-600">About</a>
+        <a href="#blog" class="hover:text-teal-600">Blog</a>
+        <a href="#contact" class="px-4 py-2 rounded-md bg-teal-600 text-white text-sm">Get Consult</a>
+      </nav>
+
+      <!-- Mobile controls -->
+      <div class="md:hidden flex items-center gap-2">
+        <a href="tel:+911234567890" class="p-2 rounded-md border text-sm">Call</a>
+        <button id="mobileToggle" aria-label="Open menu" class="p-2 rounded-md border">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+      <div class="max-w-6xl mx-auto p-4 space-y-3">
+        <a href="#services" class="block py-2">Services</a>
+        <a href="#portfolio" class="block py-2">Portfolio</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#blog" class="block py-2">Blog</a>
+        <a href="#contact" class="block py-2 bg-teal-600 text-white text-center rounded">Get Consult</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="gradient-hero text-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-6 sm:p-10 md:p-16">
+      <div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">We build reliable software & scale your business with cloud-first solutions</h1>
+        <p class="mt-3 text-slate-100 max-w-xl text-sm sm:text-base">JP spartacus helps startups and enterprises design, build and maintain web and mobile applications — fast, secure and with predictable delivery.</p>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contact" class="w-full sm:w-auto text-center px-5 py-3 bg-white text-teal-700 rounded-md font-semibold shadow">Get a Free Consultation</a>
+          <a href="#portfolio" class="w-full sm:w-auto text-center px-5 py-3 border border-white/30 rounded-md">See Portfolio</a>
+        </div>
+        <div class="mt-4 text-xs sm:text-sm text-slate-200">Trusted by startups and teams across industries.</div>
+      </div>
+
+      <!-- card moves below hero text on small screens for better flow -->
+      <div class="p-4 sm:p-6 bg-white/10 rounded-xl card-shadow">
+        <div class="bg-white rounded-lg p-4 text-slate-800">
+          <h3 class="font-semibold">Quick Contact</h3>
+          <p class="text-sm text-slate-500 mt-1">Send a short message and we'll get back within 24 hours.</p>
+          <!-- Responsive contact form -->
+          <form action="mailto:hello@jpspartacus.com" method="post" enctype="text/plain" class="mt-3 space-y-3">
+            <input name="name" placeholder="Your name" required class="w-full border rounded px-3 py-2 text-sm" />
+            <input name="email" type="email" placeholder="Your email" required class="w-full border rounded px-3 py-2 text-sm" />
+            <textarea name="message" placeholder="Message" rows="4" class="w-full border rounded px-3 py-2 text-sm"></textarea>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button type="submit" class="flex-1 px-4 py-2 bg-teal-600 text-white rounded">Send Email</button>
+              <a href="tel:+911234567890" class="flex-1 text-center px-4 py-2 border rounded">Call</a>
+            </div>
+          </form>
+          <div class="mt-2 text-xs text-slate-500">Tip: Replace mailto with Formspree or Netlify Forms for reliable submissions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-16">
+    <h2 class="text-2xl font-bold">Services</h2>
+    <p class="text-slate-600 mt-2 max-w-2xl text-sm">We offer end-to-end services to take your idea to production and beyond.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">Custom Web Development</h3>
+        <p class="text-sm text-slate-600 mt-2">Laravel, PHP, Node.js — scalable web apps and APIs.</p>
+        <div class="mt-3 text-xs text-slate-500">From MVP to full product.</div>
+      </article>
+
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">Mobile Apps</h3>
+        <p class="text-sm text-slate-600 mt-2">Cross-platform mobile apps with Flutter / React Native.</p>
+        <div class="mt-3 text-xs text-slate-500">User-focused, performant apps.</div>
+      </article>
+
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">Cloud & DevOps</h3>
+        <p class="text-sm text-slate-600 mt-2">AWS, DigitalOcean, CI/CD, containerization.</p>
+        <div class="mt-3 text-xs text-slate-500">Automated pipelines, reliable infra.</div>
+      </article>
+
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">IT Consultancy</h3>
+        <p class="text-sm text-slate-600 mt-2">Architecture reviews, tech strategy, team augmentation.</p>
+        <div class="mt-3 text-xs text-slate-500">Guidance for product decisions.</div>
+      </article>
+
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">Security & Compliance</h3>
+        <p class="text-sm text-slate-600 mt-2">Security reviews, OWASP hardening, backups.</p>
+        <div class="mt-3 text-xs text-slate-500">Production-ready security.</div>
+      </article>
+
+      <article class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h3 class="font-semibold">UI / UX Design</h3>
+        <p class="text-sm text-slate-600 mt-2">Design systems, prototyping, user testing.</p>
+        <div class="mt-3 text-xs text-slate-500">Design that converts.</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="bg-slate-50 py-10 sm:py-12">
+    <div class="max-w-6xl mx-auto p-4 sm:p-8">
+      <h2 class="text-2xl font-bold">Selected Work</h2>
+      <p class="text-slate-600 mt-2 text-sm">Case studies and product snapshots.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <figure class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="https://via.placeholder.com/600x320" alt="Project 1" class="w-full h-44 sm:h-48 object-cover">
+          <figcaption class="p-4">
+            <h4 class="font-semibold">E-commerce Platform</h4>
+            <p class="text-sm text-slate-600 mt-1">Laravel + Vue.js — full order pipeline & admin dashboard.</p>
+          </figcaption>
+        </figure>
+        <figure class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="https://via.placeholder.com/600x320" alt="Project 2" class="w-full h-44 sm:h-48 object-cover">
+          <figcaption class="p-4">
+            <h4 class="font-semibold">SaaS Analytics</h4>
+            <p class="text-sm text-slate-600 mt-1">Multi-tenant analytics product with secure APIs.</p>
+          </figcaption>
+        </figure>
+        <figure class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="https://via.placeholder.com/600x320" alt="Project 3" class="w-full h-44 sm:h-48 object-cover">
+          <figcaption class="p-4">
+            <h4 class="font-semibold">Mobile Field App</h4>
+            <p class="text-sm text-slate-600 mt-1">Offline-first mobile app for field teams.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto p-6 sm:p-10 md:p-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl font-bold">About JP spartacus</h2>
+        <p class="text-slate-600 mt-3 text-sm">We are a small experienced team specializing in web apps, mobile apps and cloud solutions. Our focus is clean architecture, fast delivery and measurable business outcomes.</p>
+        <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+          <li>✅ 6+ years of experience</li>
+          <li>✅ Agile delivery with short sprints</li>
+          <li>✅ End-to-end ownership</li>
+          <li>✅ Focus on security & testing</li>
+        </ul>
+      </div>
+      <div class="p-4 sm:p-6 bg-white rounded-lg card-shadow">
+        <h4 class="font-semibold">Our approach</h4>
+        <p class="text-sm text-slate-600 mt-2">Discovery → Design → Build → Launch → Support</p>
+        <div class="mt-3 text-xs text-slate-500">Pricing: fixed-price MVP, or monthly retainers for long-term support.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-gradient-to-r from-slate-800 to-teal-700 text-white py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto p-4 sm:p-8">
+      <h3 class="text-lg font-semibold">What clients say</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <blockquote class="bg-white/10 p-4 sm:p-6 rounded">
+          <p class="text-sm">"Professional team — delivered our product on time. Excellent communication."</p>
+          <footer class="mt-3 text-xs opacity-80">— A. Kumar, CEO</footer>
+        </blockquote>
+        <blockquote class="bg-white/10 p-4 sm:p-6 rounded">
+          <p class="text-sm">"Great architecture guidance — saved months of rework."</p>
+          <footer class="mt-3 text-xs opacity-80">— R. Singh, Head of Product</footer>
+        </blockquote>
+        <blockquote class="bg-white/10 p-4 sm:p-6 rounded">
+          <p class="text-sm">"Responsive and reliable. Highly recommended for startups."</p>
+          <footer class="mt-3 text-xs opacity-80">— M. Gupta, Founder</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="bg-slate-900 text-slate-100 py-10 sm:py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-4 sm:p-8">
+      <div>
+        <h4 class="font-semibold">Get in touch</h4>
+        <p class="text-sm text-slate-400 mt-2">Email: <a href="mailto:hello@jpspartacus.com" class="underline">hello@jpspartacus.com</a></p>
+        <p class="text-sm text-slate-400">Phone: <a href="tel:+911234567890" class="underline">+91 12345 67890</a></p>
+        <p class="text-sm text-slate-400 mt-3">Address: Remote / India</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Quick links</h4>
+        <ul class="mt-2 text-sm text-slate-400 space-y-1">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Subscribe</h4>
+        <p class="text-sm text-slate-400 mt-2">Get occasional updates on launches and blog posts.</p>
+        <form action="mailto:hello@jpspartacus.com" method="post" enctype="text/plain" class="mt-3">
+          <input placeholder="Your email" class="w-full rounded px-3 py-2 text-sm" />
+          <button type="submit" class="mt-2 w-full bg-teal-600 text-white rounded px-3 py-2">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="text-center text-slate-500 text-xs mt-6">© <span id="year"></span> JP spartacus. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // small JS for mobile menu + year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle && mobileToggle.addEventListener('click', ()=> {
+      mobileMenu.classList.toggle('hidden');
+      mobileToggle.setAttribute('aria-expanded', !mobileMenu.classList.contains('hidden'))
+    });
+
+    // Improve tap targets and ensure hero buttons stack on small screens (handled via Tailwind classes)
+  </script>
+</body>
+</html>
